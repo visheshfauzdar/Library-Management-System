@@ -38,14 +38,17 @@ class Multiple():
         headingFrame1.place(relx=0.35,rely=0.1,relwidth=0.3,relheight=0.1)
         headingLabel = Label(headingFrame1, text="Transactions", bg='black', fg='white', font=('Courier',15))
         headingLabel.place(relx=0,rely=0, relwidth=1, relheight=1)
-        book_name_label=Label(window,text="Book Name ",bg="powderblue",font=('bold','12'))
-        book_name_label.place(x=60,y=200)
-
-        author_label=Label(window,text="Issuer ",bg="powderblue",font=('bold','12'))
-        author_label.place(x=300,y=200)
+       
+        labelFrame = Frame(window,bg='black')
+        labelFrame.place(relx=0.1,rely=0.3,relwidth=0.8,relheight=0.5) 
+        lb1 = Label(labelFrame,text="Book Name", bg='black', fg='powderblue')
+        lb1.place(relx=0.05,rely=0.2)
+        
+        inf1 = Label(labelFrame,text="Issuer ",bg="black",fg="powderblue")
+        inf1.place(relx=0.40,rely=0.2)
     
-        qty_label=Label(window,text="Payment Status ",bg="powderblue",font=('bold','12'))
-        qty_label.place(x=460,y=200)
+        inf1 = Label(labelFrame,text="Payment Status ",bg="black",fg="powderblue")
+        inf1.place(relx=0.75,rely=0.2)
 
         admin_Submit=Button(window,text="Back to HomePage")
         admin_Submit.place(x=300,y=400)
@@ -96,6 +99,17 @@ class Multiple():
         search_books.place(x=270,y=200)
         search_box=Entry(window)
         search_box.place(relwidth=0.25,x=330,y=200)
+        
+        labelFrame = Frame(window,bg='black')
+        labelFrame.place(relx=0.1,rely=0.3,relwidth=0.8,relheight=0.5) 
+        lb1 = Label(labelFrame,text="Book Id", bg='black', fg='powderblue')
+        lb1.place(relx=0.05,rely=0.2)
+        
+        inf1 = Label(labelFrame,text="Book Name",bg="black",fg="powderblue")
+        inf1.place(relx=0.40,rely=0.2)
+    
+        inf1 = Label(labelFrame,text="Publisher ",bg="black",fg="powderblue")
+        inf1.place(relx=0.75,rely=0.2)
 root=Tk()
 obj=Multiple(root)
 root.mainloop()
